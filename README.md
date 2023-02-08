@@ -8,6 +8,7 @@ some of the tasks that can be ran on the contract:
 npx hardhat help
 npx hardhat test
 REPORT_GAS=true npx hardhat test
+npm i -D @nomiclabs/hardhat-etherscan
 npm install dotenv
 npx hardhat node
 npx hardhat run scripts/deploy.js --network goerli
