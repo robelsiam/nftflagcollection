@@ -24,7 +24,7 @@ contract NFTGenerator is ERC721URIStorage {
   string[] secondWords = ["#000000","#330000","#660000","#990000","#CC0000","#FF0000","#003300","#333300","#663300","#993300","#CC3300","#FF3300","#006600","#336600","#666600","#996600","#CC6600","#FF6600","#009900","#339900","#669900","#999900","#CC9900","#FF9900","#00CC00","#33CC00","#66CC00","#99CC00","#CCCC00","#FFCC00","#00FF00","#33FF00","#66FF00","#99FF00","#CCFF00","#FFFF0"];
   string[] thirdWords = ["#000000","#330000","#660000","#990000","#CC0000","#FF0000","#003300","#333300","#663300","#993300","#CC3300","#FF3300","#006600","#336600","#666600","#996600","#CC6600","#FF6600","#009900","#339900","#669900","#999900","#CC9900","#FF9900","#00CC00","#33CC00","#66CC00","#99CC00","#CCCC00","#FFCC00","#00FF00","#33FF00","#66FF00","#99FF00","#CCFF00","#FFFF0"];
 
-  event NewEpicNFTMinted(address sender, uint256 tokenId);
+  event NewNFTMinted(address sender, uint256 tokenId);
 
   constructor() ERC721 ("flagNFT", "FLAG") {
     console.log("This is a NFT contract.");
@@ -87,6 +87,6 @@ contract NFTGenerator is ERC721URIStorage {
   
     _tokenIds.increment();
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
-    emit NewEpicNFTMinted(msg.sender, newItemId);
+    emit NewNFTMinted(msg.sender, newItemId);
   }
 }
