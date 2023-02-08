@@ -6,5 +6,4 @@ typechain
 
 #Hardhat files
 cache
-artifacts
-Why do you need to use your p
+artifacts/
